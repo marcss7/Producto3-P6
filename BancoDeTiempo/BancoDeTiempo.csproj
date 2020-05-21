@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD36F281-8212-4B33-A84A-810FAB9EA075}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BancoDeTiempo</RootNamespace>
+    <AssemblyName>BancoDeTiempo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BTModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BTModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BTModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BTModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BTModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="concepto_servicios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>concepto_servicios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CrearOferta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearOferta.Designer.cs">
+      <DependentUpon>CrearOferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestorBBDD.cs" />
+    <Compile Include="ListadoMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoMovimientos.Designer.cs">
+      <DependentUpon>ListadoMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoServicios.Designer.cs">
+      <DependentUpon>ListadoServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimiento.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nombre_categoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nombre_categoria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nombre_tipo_servicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nombre_usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nombre_usuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicio.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servicios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>servicios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoServicio.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferirTiempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferirTiempo.Designer.cs">
+      <DependentUpon>TransferirTiempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>BTModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrearOferta.resx">
+      <DependentUpon>CrearOferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoMovimientos.resx">
+      <DependentUpon>ListadoMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoServicios.resx">
+      <DependentUpon>ListadoServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferirTiempo.resx">
+      <DependentUpon>TransferirTiempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="BTModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BTModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BTModel.edmx.diagram">
+      <DependentUpon>BTModel.edmx</DependentUpon>
+    </None>
+    <None Include="concepto_servicios.xsc">
+      <DependentUpon>concepto_servicios.xsd</DependentUpon>
+    </None>
+    <None Include="concepto_servicios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>concepto_servicios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="concepto_servicios.xss">
+      <DependentUpon>concepto_servicios.xsd</DependentUpon>
+    </None>
+    <None Include="nombre_categoria.xsc">
+      <DependentUpon>nombre_categoria.xsd</DependentUpon>
+    </None>
+    <None Include="nombre_categoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nombre_categoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nombre_categoria.xss">
+      <DependentUpon>nombre_categoria.xsd</DependentUpon>
+    </None>
+    <None Include="nombre_tipo_servicio.xsc">
+      <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
+    </None>
+    <None Include="nombre_tipo_servicio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nombre_tipo_servicio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nombre_tipo_servicio.xss">
+      <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
+    </None>
+    <None Include="nombre_usuario.xsc">
+      <DependentUpon>nombre_usuario.xsd</DependentUpon>
+    </None>
+    <None Include="nombre_usuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>nombre_usuario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="nombre_usuario.xss">
+      <DependentUpon>nombre_usuario.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="servicios.xsc">
+      <DependentUpon>servicios.xsd</DependentUpon>
+    </None>
+    <None Include="servicios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>servicios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="servicios.xss">
+      <DependentUpon>servicios.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BTModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BTModel.Context.cs</LastGenOutput>
+      <DependentUpon>BTModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="BTModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BTModel.edmx</DependentUpon>
+      <LastGenOutput>BTModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\LOGO-THE-BANKERS_pq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

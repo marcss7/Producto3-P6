@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="158fafd3fc354824b391846699d24393" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="btModel.Categoria" Width="1.5" PointX="1.375" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="btModel.Factura" Width="1.5" PointX="1.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="btModel.Movimiento" Width="1.5" PointX="7.625" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="btModel.Servicio" Width="1.5" PointX="4" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="btModel.Solicitud" Width="1.5" PointX="7" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="btModel.TipoServicio" Width="1.5" PointX="4" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="btModel.Usuario" Width="1.5" PointX="4.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="btModel.fk_categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_servicios_4" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="btModel.fk_usuarios_5" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_usuarios_6" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_servicios_3" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_usuarios_3" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_usuarios_4" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_servicios_2" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_tipo_servicio" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_usuarios_1" ManuallyRouted="false" />
+        <AssociationConnector Association="btModel.fk_usuarios_2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
