@@ -1,2 +1,3 @@
-# Producto3-P6
-Repositorio del proyecto 6: Técnicas de persistencia de datos con .NET. Repositorio del producto 3.
+# The Bankers
+
+En este repositorio se encuentra el código correspondiente al Producto 3 del proyecto P6 - Técnicas de persistencia de datos con .NET.
