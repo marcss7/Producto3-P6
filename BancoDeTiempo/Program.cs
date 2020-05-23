@@ -8,6 +8,8 @@ namespace BancoDeTiempo
 {
     static class Program
     {
+        private static Usuario usuarioAuth = null;
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -17,6 +19,12 @@ namespace BancoDeTiempo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+        }
+
+        public static Usuario usuarioAutenticado
+        {
+            get { return usuarioAuth; }
+            set { usuarioAuth = value; }
         }
     }
 }

@@ -94,18 +94,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GestorBBDD.cs" />
-    <Compile Include="ListadoMovimientos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListadoMovimientos.Designer.cs">
-      <DependentUpon>ListadoMovimientos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListadoServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListadoServicios.Designer.cs">
-      <DependentUpon>ListadoServicios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +128,6 @@
     <Compile Include="Servicio.cs">
       <DependentUpon>BTModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="servicios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>servicios.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Solicitud.cs">
       <DependentUpon>BTModel.tt</DependentUpon>
     </Compile>
@@ -166,14 +149,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoMovimientos.resx">
-      <DependentUpon>ListadoMovimientos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListadoServicios.resx">
-      <DependentUpon>ListadoServicios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -244,17 +222,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="servicios.xsc">
-      <DependentUpon>servicios.xsd</DependentUpon>
-    </None>
-    <None Include="servicios.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>servicios.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="servicios.xss">
-      <DependentUpon>servicios.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

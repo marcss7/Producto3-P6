@@ -12,6 +12,7 @@ namespace BancoDeTiempo
 {
     public partial class CrearOferta : Form
     {
+
         public CrearOferta()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace BancoDeTiempo
             s.tipo_servicio = ts.id_tipo_servicio;
 
             GestorBBDD.agregarServicio(s);
+
             this.Close();
         }
 
