@@ -32,14 +32,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.nombre_usuario = new BancoDeTiempo.nombre_usuario();
-            this.nombreusuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreusuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombre_usuario = new BancoDeTiempo.nombre_usuario();
             this.usuariosTableAdapter = new BancoDeTiempo.nombre_usuarioTableAdapters.usuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -73,20 +73,20 @@
             this.comboBox1.Size = new System.Drawing.Size(141, 21);
             this.comboBox1.TabIndex = 2;
             // 
-            // nombre_usuario
+            // usuariosBindingSource
             // 
-            this.nombre_usuario.DataSetName = "nombre_usuario";
-            this.nombre_usuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.nombreusuarioBindingSource;
             // 
             // nombreusuarioBindingSource
             // 
             this.nombreusuarioBindingSource.DataSource = this.nombre_usuario;
             this.nombreusuarioBindingSource.Position = 0;
             // 
-            // usuariosBindingSource
+            // nombre_usuario
             // 
-            this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.nombreusuarioBindingSource;
+            this.nombre_usuario.DataSetName = "nombre_usuario";
+            this.nombre_usuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuariosTableAdapter
             // 
@@ -103,11 +103,12 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).EndInit();
             this.ResumeLayout(false);
 
         }

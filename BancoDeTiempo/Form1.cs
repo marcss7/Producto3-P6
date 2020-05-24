@@ -36,5 +36,10 @@ namespace BancoDeTiempo
             this.usuariosTableAdapter.Fill(this.nombre_usuario.usuarios);
 
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }
