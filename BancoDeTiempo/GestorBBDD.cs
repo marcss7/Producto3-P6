@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,6 +93,12 @@ namespace BancoDeTiempo
             return bte.movimientos.Find(id);
         }
 
+        public static Movimiento buscarMovPorServicio(String id_servicio)
+        {
+            Movimiento m = bte.movimientos.SingleOrDefault(movimiento => movimiento.concepto == id_servicio);
+            return m;
+        }
+
         public static void actualizarMovimiento(Movimiento m)
         {
             bte.movimientos.Attach(m);
@@ -123,6 +131,12 @@ namespace BancoDeTiempo
         public static Solicitud buscarSolicitud(String id)
         {
             return bte.solicitudes.Find(id);
+        }
+
+        public static Solicitud buscarSolPorServicio(Servicio servicio)
+        {
+            Solicitud sltd = bte.solicitudes.Where(solicitud => solicitud.concepto == servicio.id_servicio).SingleOrDefault();
+            return sltd;
         }
 
         public static void actualizarSolicitud(Solicitud s)

@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -72,11 +73,6 @@
     </Compile>
     <Compile Include="Categoria.cs">
       <DependentUpon>BTModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="concepto_servicios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>concepto_servicios.xsd</DependentUpon>
     </Compile>
     <Compile Include="CrearOferta.cs">
       <SubType>Form</SubType>
@@ -167,17 +163,6 @@
     </EntityDeploy>
     <None Include="BTModel.edmx.diagram">
       <DependentUpon>BTModel.edmx</DependentUpon>
-    </None>
-    <None Include="concepto_servicios.xsc">
-      <DependentUpon>concepto_servicios.xsd</DependentUpon>
-    </None>
-    <None Include="concepto_servicios.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>concepto_servicios.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="concepto_servicios.xss">
-      <DependentUpon>concepto_servicios.xsd</DependentUpon>
     </None>
     <None Include="nombre_categoria.xsc">
       <DependentUpon>nombre_categoria.xsd</DependentUpon>
