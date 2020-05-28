@@ -34,12 +34,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreusuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombre_usuario = new BancoDeTiempo.nombre_usuario();
-            this.usuariosTableAdapter = new BancoDeTiempo.nombre_usuarioTableAdapters.usuariosTableAdapter();
+            this.nombre_usuarios = new BancoDeTiempo.nombre_usuarios();
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new BancoDeTiempo.nombre_usuariosTableAdapters.usuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -65,28 +67,29 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.usuariosBindingSource;
+            this.comboBox1.DataSource = this.usuariosBindingSource1;
             this.comboBox1.DisplayMember = "nombre_usuario";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(565, 479);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(141, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.ValueMember = "nombre_usuario";
             // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "usuarios";
             this.usuariosBindingSource.DataSource = this.nombreusuarioBindingSource;
             // 
-            // nombreusuarioBindingSource
+            // nombre_usuarios
             // 
-            this.nombreusuarioBindingSource.DataSource = this.nombre_usuario;
-            this.nombreusuarioBindingSource.Position = 0;
+            this.nombre_usuarios.DataSetName = "nombre_usuarios";
+            this.nombre_usuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nombre_usuario
+            // usuariosBindingSource1
             // 
-            this.nombre_usuario.DataSetName = "nombre_usuario";
-            this.nombre_usuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.usuariosBindingSource1.DataMember = "usuarios";
+            this.usuariosBindingSource1.DataSource = this.nombre_usuarios;
             // 
             // usuariosTableAdapter
             // 
@@ -107,8 +110,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,9 +122,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource nombreusuarioBindingSource;
-        private nombre_usuario nombre_usuario;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private nombre_usuarioTableAdapters.usuariosTableAdapter usuariosTableAdapter;
+        private nombre_usuarios nombre_usuarios;
+        private System.Windows.Forms.BindingSource usuariosBindingSource1;
+        private nombre_usuariosTableAdapters.usuariosTableAdapter usuariosTableAdapter;
     }
 }
 

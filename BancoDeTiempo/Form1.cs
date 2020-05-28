@@ -30,16 +30,17 @@ namespace BancoDeTiempo
             this.Hide();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'nombre_usuario.usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.nombre_usuario.usuarios);
-
-        }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'nombre_usuarios.usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.nombre_usuarios.usuarios);
+
         }
     }
 }

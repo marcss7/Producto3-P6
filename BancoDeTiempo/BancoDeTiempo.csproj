@@ -109,10 +109,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
     </Compile>
-    <Compile Include="nombre_usuario.Designer.cs">
+    <Compile Include="nombre_usuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>nombre_usuario.xsd</DependentUpon>
+      <DependentUpon>nombre_usuarios.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -186,16 +186,16 @@
     <None Include="nombre_tipo_servicio.xss">
       <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
     </None>
-    <None Include="nombre_usuario.xsc">
-      <DependentUpon>nombre_usuario.xsd</DependentUpon>
+    <None Include="nombre_usuarios.xsc">
+      <DependentUpon>nombre_usuarios.xsd</DependentUpon>
     </None>
-    <None Include="nombre_usuario.xsd">
+    <None Include="nombre_usuarios.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>nombre_usuario.Designer.cs</LastGenOutput>
+      <LastGenOutput>nombre_usuarios.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="nombre_usuario.xss">
-      <DependentUpon>nombre_usuario.xsd</DependentUpon>
+    <None Include="nombre_usuarios.xss">
+      <DependentUpon>nombre_usuarios.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

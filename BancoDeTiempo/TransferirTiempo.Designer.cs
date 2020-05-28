@@ -33,19 +33,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombreusuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombre_usuario = new BancoDeTiempo.nombre_usuario();
-            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new BancoDeTiempo.nombre_usuarioTableAdapters.usuariosTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.serviciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviciosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,31 +71,7 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.nombreusuarioBindingSource;
-            // 
-            // nombreusuarioBindingSource
-            // 
-            this.nombreusuarioBindingSource.DataSource = this.nombre_usuario;
-            this.nombreusuarioBindingSource.Position = 0;
-            // 
-            // nombre_usuario
-            // 
-            this.nombre_usuario.DataSetName = "nombre_usuario";
-            this.nombre_usuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource1
-            // 
-            this.usuariosBindingSource1.DataMember = "usuarios";
-            this.usuariosBindingSource1.DataSource = this.nombreusuarioBindingSource;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
+            //
             // label4
             // 
             this.label4.AutoSize = true;
@@ -152,9 +121,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transferencia de tiempo";
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviciosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,11 +132,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.BindingSource nombreusuarioBindingSource;
-        private nombre_usuario nombre_usuario;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private nombre_usuarioTableAdapters.usuariosTableAdapter usuariosTableAdapter;
-        private System.Windows.Forms.BindingSource usuariosBindingSource1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;

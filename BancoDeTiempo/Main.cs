@@ -13,7 +13,6 @@ namespace BancoDeTiempo
 {
     public partial class Main : Form
     {
-        CrearOferta crearOfertaForm;
         Form1 cerrarSesion;
         Usuario usuarioLogeado = Program.usuarioAutenticado;
         static btEntities bte = new btEntities();
@@ -140,21 +139,35 @@ namespace BancoDeTiempo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            crearOfertaForm = new CrearOferta();
-            crearOfertaForm.ShowDialog();
+            Servicio s = new Servicio();
+            s.id_servicio = RandomString(10);
+            s.id_usuario = usuarioLogeado.id_usuario;
+            s.fecha_creacion = DateTime.Now;
+
+            using (var crearOfertaForm = new CrearOferta())
+            {
+                var resultado = crearOfertaForm.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    s.titulo = crearOfertaForm.titulo;
+                    s.descripcion = crearOfertaForm.descripcion;
+                    s.id_categoria = crearOfertaForm.categoria;
+                    s.tipo_servicio = crearOfertaForm.tipoServicio;
+                }
+            }
+            GestorBBDD.agregarServicio(s);
+            showMisOfertas(dataGridView2);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
+            if (dataGridView1.SelectedRows.Count != 0)
             {
+                DataGridViewRow fila = this.dataGridView1.SelectedRows[0];
                 Solicitud sltd = new Solicitud();
                 sltd.id_solicitud = RandomString(10);
                 sltd.id_emisor = usuarioLogeado.id_usuario;
-                var tituloOferta = this.dataGridView1[e.ColumnIndex+1, e.RowIndex].Value.ToString();
+                var tituloOferta = fila.Cells["titulo"].Value.ToString();
                 Servicio servicioDeSolicitud = GestorBBDD.buscarServPorNombre(tituloOferta);
                 sltd.concepto = servicioDeSolicitud.id_servicio;
                 sltd.fecha_creacion = DateTime.Now;
@@ -165,17 +178,15 @@ namespace BancoDeTiempo
             }
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
+            if (dataGridView3.SelectedRows.Count != 0)
             {
+                DataGridViewRow fila = this.dataGridView3.SelectedRows[0];
                 Factura f = new Factura();
                 f.id_factura = RandomString(10);
                 f.usuario_emisor = usuarioLogeado.id_usuario;
-                var tituloOferta = this.dataGridView3[e.ColumnIndex + 1, e.RowIndex].Value.ToString();
+                var tituloOferta = fila.Cells["titulo"].Value.ToString();
                 Servicio servicioDeFactura = GestorBBDD.buscarServPorNombre(tituloOferta);
                 f.usuario_receptor = servicioDeFactura.id_usuario;
                 f.concepto = servicioDeFactura.id_servicio;
@@ -184,21 +195,46 @@ namespace BancoDeTiempo
                 f.importe = movimientoDeFactura.horas;
                 f.fecha = DateTime.Now;
                 GestorBBDD.agregarFactura(f);
-
             }
         }
 
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
+            if (dataGridView5.SelectedRows.Count != 0)
             {
+                DataGridViewRow fila = this.dataGridView5.SelectedRows[0];
+
+                DialogResult dialogResult = MessageBox.Show("¿Aceptas la solicitud seleccionada?", "Estado de la solicitud recibida", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    var tituloOferta = fila.Cells["titulo"].Value.ToString();
+                    Servicio servicioDeSolicitud = GestorBBDD.buscarServPorNombre(tituloOferta);
+                    Solicitud sltd = GestorBBDD.buscarSolPorServicio(servicioDeSolicitud);
+                    sltd.aceptada = true;
+                    GestorBBDD.actualizarSolicitud(sltd);
+                    showSolicitudesRecibidas(dataGridView5);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    var tituloOferta = fila.Cells["titulo"].Value.ToString();
+                    Servicio servicioDeSolicitud = GestorBBDD.buscarServPorNombre(tituloOferta);
+                    Solicitud sltd = GestorBBDD.buscarSolPorServicio(servicioDeSolicitud);
+                    sltd.aceptada = false;
+                    GestorBBDD.actualizarSolicitud(sltd);
+                    showSolicitudesRecibidas(dataGridView5);
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (dataGridView4.SelectedRows.Count != 0)
+            {
+                DataGridViewRow fila = this.dataGridView4.SelectedRows[0];
                 Movimiento m = new Movimiento();
                 m.id_movimiento = RandomString(10);
                 m.usuario_origen = usuarioLogeado.id_usuario;
-                var tituloOferta = this.dataGridView4[e.ColumnIndex + 1, e.RowIndex].Value.ToString();
+                var tituloOferta = fila.Cells["titulo"].Value.ToString();
                 Servicio servicioDeMovimiento = GestorBBDD.buscarServPorNombre(tituloOferta);
                 m.usuario_destino = servicioDeMovimiento.id_usuario;
                 m.concepto = servicioDeMovimiento.id_servicio;
@@ -217,8 +253,8 @@ namespace BancoDeTiempo
 
                 Usuario usuarioOrigen = GestorBBDD.buscarUsuario(m.usuario_origen);
                 Usuario usuarioDestino = GestorBBDD.buscarUsuario(m.usuario_destino);
-                
-                usuarioOrigen.balance = Decimal.Subtract(Convert.ToDecimal(usuarioOrigen.balance),Convert.ToDecimal(m.horas));
+
+                usuarioOrigen.balance = Decimal.Subtract(Convert.ToDecimal(usuarioOrigen.balance), Convert.ToDecimal(m.horas));
                 usuarioDestino.balance = Decimal.Add(Convert.ToDecimal(usuarioDestino.balance), Convert.ToDecimal(m.horas));
                 GestorBBDD.actualizarUsuario(usuarioOrigen);
                 GestorBBDD.actualizarUsuario(usuarioDestino);
@@ -228,35 +264,5 @@ namespace BancoDeTiempo
                 showMisMovimientos(dataGridView3);
             }
         }
-
-        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
-            {
-                DialogResult dialogResult = MessageBox.Show("¿Aceptas la solicitud seleccionada?", "Estado de la solicitud recibida", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    var tituloOferta = this.dataGridView5[e.ColumnIndex + 1, e.RowIndex].Value.ToString();
-                    Servicio servicioDeSolicitud = GestorBBDD.buscarServPorNombre(tituloOferta);
-                    Solicitud sltd = GestorBBDD.buscarSolPorServicio(servicioDeSolicitud);
-                    sltd.aceptada = true;
-                    GestorBBDD.actualizarSolicitud(sltd);
-                    GestorBBDD.eliminarSolicitud(sltd.id_solicitud);
-                    showSolicitudesRecibidas(dataGridView5);
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    var tituloOferta = this.dataGridView5[e.ColumnIndex + 1, e.RowIndex].Value.ToString();
-                    Servicio servicioDeSolicitud = GestorBBDD.buscarServPorNombre(tituloOferta);
-                    Solicitud sltd = GestorBBDD.buscarSolPorServicio(servicioDeSolicitud);
-                    GestorBBDD.eliminarSolicitud(sltd.id_solicitud);
-                    showSolicitudesRecibidas(dataGridView5);
-                }
-            }
-        }
-
     }
 }
