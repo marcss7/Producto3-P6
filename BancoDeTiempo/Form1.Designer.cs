@@ -32,16 +32,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nombre_usuarios = new BancoDeTiempo.nombre_usuarios();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreusuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nombre_usuarios = new BancoDeTiempo.nombre_usuarios();
-            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new BancoDeTiempo.nombre_usuariosTableAdapters.usuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nombreusuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -76,20 +76,20 @@
             this.comboBox1.TabIndex = 2;
             this.comboBox1.ValueMember = "nombre_usuario";
             // 
-            // usuariosBindingSource
+            // usuariosBindingSource1
             // 
-            this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.nombreusuarioBindingSource;
+            this.usuariosBindingSource1.DataMember = "usuarios";
+            this.usuariosBindingSource1.DataSource = this.nombre_usuarios;
             // 
             // nombre_usuarios
             // 
             this.nombre_usuarios.DataSetName = "nombre_usuarios";
             this.nombre_usuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuariosBindingSource1
+            // usuariosBindingSource
             // 
-            this.usuariosBindingSource1.DataMember = "usuarios";
-            this.usuariosBindingSource1.DataSource = this.nombre_usuarios;
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.nombreusuarioBindingSource;
             // 
             // usuariosTableAdapter
             // 
@@ -99,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1284, 661);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
@@ -109,9 +110,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nombre_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

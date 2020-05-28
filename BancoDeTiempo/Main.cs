@@ -13,10 +13,18 @@ namespace BancoDeTiempo
 {
     public partial class Main : Form
     {
+        MostrarFactura mostrarFacturaForm;
         Form1 cerrarSesion;
         Usuario usuarioLogeado = Program.usuarioAutenticado;
         static btEntities bte = new btEntities();
         private static Random random = new Random();
+
+        public static string MF_id_factura { get; set; }
+        public static string MF_usuario_emisor { get; set; }
+        public static string MF_usuario_receptor { get; set; }
+        public static string MF_concepto { get; set; }
+        public static double MF_importe { get; set; }
+        public static Nullable<System.DateTime> MF_fecha { get; set; }
 
         public Main()
         {
@@ -195,6 +203,19 @@ namespace BancoDeTiempo
                 f.importe = movimientoDeFactura.horas;
                 f.fecha = DateTime.Now;
                 GestorBBDD.agregarFactura(f);
+
+                Usuario usuarioEmisor = GestorBBDD.buscarUsuario(f.usuario_emisor);
+                Usuario usuarioReceptor = GestorBBDD.buscarUsuario(f.usuario_receptor);
+                Main.MF_id_factura = f.id_factura;
+                Main.MF_usuario_emisor = usuarioEmisor.nombre_usuario;
+                Main.MF_usuario_receptor = usuarioReceptor.nombre_usuario;
+                Main.MF_concepto = servicioDeFactura.titulo;
+                Main.MF_importe = f.importe;
+                Main.MF_fecha = f.fecha;
+
+                mostrarFacturaForm = new MostrarFactura();
+                mostrarFacturaForm.ShowDialog();
+                   
             }
         }
 
