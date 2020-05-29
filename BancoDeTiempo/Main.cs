@@ -29,6 +29,19 @@ namespace BancoDeTiempo
         public Main()
         {
             InitializeComponent();
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.FlatAppearance.BorderSize = 0;
+
             label1.Text = String.Format("Usuario autenticado: {0}", usuarioLogeado.nombre_usuario);
             label7.Text = String.Format("Saldo del usuario: {0} h", usuarioLogeado.balance);
             showOfertasPublicadas(dataGridView1);
@@ -161,9 +174,9 @@ namespace BancoDeTiempo
                     s.descripcion = crearOfertaForm.descripcion;
                     s.id_categoria = crearOfertaForm.categoria;
                     s.tipo_servicio = crearOfertaForm.tipoServicio;
+                    GestorBBDD.agregarServicio(s);
                 }
             }
-            GestorBBDD.agregarServicio(s);
             showMisOfertas(dataGridView2);
         }
 
@@ -267,18 +280,18 @@ namespace BancoDeTiempo
                     {
                         m.comentarios = transferirTiempoForm.comentario;
                         m.horas = transferirTiempoForm.hora;
+                        m.fecha = DateTime.Now;
+                        GestorBBDD.agregarMovimiento(m);
+
+                        Usuario usuarioOrigen = GestorBBDD.buscarUsuario(m.usuario_origen);
+                        Usuario usuarioDestino = GestorBBDD.buscarUsuario(m.usuario_destino);
+
+                        usuarioOrigen.balance = Decimal.Subtract(Convert.ToDecimal(usuarioOrigen.balance), Convert.ToDecimal(m.horas));
+                        usuarioDestino.balance = Decimal.Add(Convert.ToDecimal(usuarioDestino.balance), Convert.ToDecimal(m.horas));
+                        GestorBBDD.actualizarUsuario(usuarioOrigen);
+                        GestorBBDD.actualizarUsuario(usuarioDestino);
                     }
                 }
-                m.fecha = DateTime.Now;
-                GestorBBDD.agregarMovimiento(m);
-
-                Usuario usuarioOrigen = GestorBBDD.buscarUsuario(m.usuario_origen);
-                Usuario usuarioDestino = GestorBBDD.buscarUsuario(m.usuario_destino);
-
-                usuarioOrigen.balance = Decimal.Subtract(Convert.ToDecimal(usuarioOrigen.balance), Convert.ToDecimal(m.horas));
-                usuarioDestino.balance = Decimal.Add(Convert.ToDecimal(usuarioDestino.balance), Convert.ToDecimal(m.horas));
-                GestorBBDD.actualizarUsuario(usuarioOrigen);
-                GestorBBDD.actualizarUsuario(usuarioDestino);
 
                 label7.Text = String.Format("Saldo del usuario: {0} h", usuarioLogeado.balance);
 

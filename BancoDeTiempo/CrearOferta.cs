@@ -20,6 +20,10 @@ namespace BancoDeTiempo
         public CrearOferta()
         {
             InitializeComponent();
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
         }
 
         private void CrearOferta_Load(object sender, EventArgs e)

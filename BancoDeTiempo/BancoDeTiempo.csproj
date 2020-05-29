@@ -115,11 +115,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
     </Compile>
-    <Compile Include="nombre_usuarios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>nombre_usuarios.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -141,6 +136,11 @@
     </Compile>
     <Compile Include="TransferirTiempo.Designer.cs">
       <DependentUpon>TransferirTiempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usernames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usernames.xsd</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
       <DependentUpon>BTModel.tt</DependentUpon>
@@ -195,17 +195,6 @@
     <None Include="nombre_tipo_servicio.xss">
       <DependentUpon>nombre_tipo_servicio.xsd</DependentUpon>
     </None>
-    <None Include="nombre_usuarios.xsc">
-      <DependentUpon>nombre_usuarios.xsd</DependentUpon>
-    </None>
-    <None Include="nombre_usuarios.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>nombre_usuarios.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="nombre_usuarios.xss">
-      <DependentUpon>nombre_usuarios.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,6 +205,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="usernames.xsc">
+      <DependentUpon>usernames.xsd</DependentUpon>
+    </None>
+    <None Include="usernames.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usernames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usernames.xss">
+      <DependentUpon>usernames.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -231,6 +231,7 @@
       <DependentUpon>BTModel.edmx</DependentUpon>
       <LastGenOutput>BTModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icono_reloj.ico" />
     <None Include="Resources\LOGO-THE-BANKERS_pq.png" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Globalization;
 using System.Linq;
@@ -280,5 +281,6 @@ namespace BancoDeTiempo
         {
             var users = bte.usuarios;
         }
+
     }
 }
