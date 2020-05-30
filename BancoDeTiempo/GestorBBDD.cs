@@ -94,9 +94,9 @@ namespace BancoDeTiempo
             return bte.movimientos.Find(id);
         }
 
-        public static Movimiento buscarMovPorServicio(String id_servicio)
+        public static Movimiento buscarMovPorServicio(String id_servicio, String id_usuario)
         {
-            Movimiento m = bte.movimientos.FirstOrDefault(movimiento => movimiento.concepto == id_servicio);
+            Movimiento m = bte.movimientos.Where(movimiento => movimiento.concepto == id_servicio).SingleOrDefault(movimiento => movimiento.usuario_origen == id_usuario);
             return m;
         }
 

@@ -211,7 +211,7 @@ namespace BancoDeTiempo
                 Servicio servicioDeFactura = GestorBBDD.buscarServPorNombre(tituloOferta);
                 f.usuario_receptor = servicioDeFactura.id_usuario;
                 f.concepto = servicioDeFactura.id_servicio;
-                Movimiento movimientoDeFactura = GestorBBDD.buscarMovPorServicio(servicioDeFactura.id_servicio);
+                Movimiento movimientoDeFactura = GestorBBDD.buscarMovPorServicio(servicioDeFactura.id_servicio, usuarioLogeado.id_usuario);
                 f.usuario_receptor = movimientoDeFactura.usuario_destino;
                 f.importe = movimientoDeFactura.horas;
                 f.fecha = DateTime.Now;
