@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BancoDeTiempo
 {
+    //Formulario hijo de Main que se abre para definir el titulo, la descripcion, la categoria y el tipo de servicio de un registro de servicio
     public partial class CrearOferta : Form
     {
+        //Variables públicas a las que se accederá desde Main para crear un registro de servicios
         public string titulo { get; set; }
         public string descripcion { get; set; }
         public string categoria { get; set; }
@@ -20,6 +15,8 @@ namespace BancoDeTiempo
         public CrearOferta()
         {
             InitializeComponent();
+
+            //Definir estilo sin borde de los botones
             button1.FlatStyle = FlatStyle.Flat;
             button1.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -39,14 +36,17 @@ namespace BancoDeTiempo
             titulo = textBox2.Text;
             descripcion = textBox3.Text;
 
+            //Obtenemos el objeto categoria a través de su nombre
             String nombre_categoria = comboBox1.Text;
             Categoria c = GestorBBDD.buscarCatPorNombre(nombre_categoria);
             categoria = c.id_categoria;
 
+            //Obtenemos el objeto tipo_servicio a través de su nombre
             String nombre_tipo_servicio = comboBox3.Text;
             TipoServicio ts = GestorBBDD.buscarTipoPorNombre(nombre_tipo_servicio);
             tipoServicio = ts.id_tipo_servicio;
 
+            //Devuelve el resultado de este formulario hijo a su padre
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

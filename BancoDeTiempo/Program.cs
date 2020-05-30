@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BancoDeTiempo
 {
     static class Program
     {
-        private static Usuario usuarioAuth = null;
-
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -21,10 +16,7 @@ namespace BancoDeTiempo
             Application.Run(new Form1());
         }
 
-        public static Usuario usuarioAutenticado
-        {
-            get { return usuarioAuth; }
-            set { usuarioAuth = value; }
-        }
+        //Variable global que define el usuario logeado
+        public static Usuario usuarioAutenticado { get; set; } = null;
     }
 }

@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BancoDeTiempo
 {
+    //Clase que implementa la capa de acceso a los datos almacenados en la base de datos
     class GestorBBDD
     {
         static btEntities bte = new btEntities();
@@ -27,6 +22,7 @@ namespace BancoDeTiempo
 
         public static Categoria buscarCatPorNombre(String nombre)
         {
+            //Da un único resultado de la búsqueda, si hay más de un resultado, lanza una excepción
             Categoria c = bte.categorias.SingleOrDefault(categoria => categoria.nombre_categoria == nombre);
             return c;
         }
@@ -96,6 +92,7 @@ namespace BancoDeTiempo
 
         public static Movimiento buscarMovPorServicio(String id_servicio, String id_usuario)
         {
+            //Busca el movimiento por concepto y por el usuario de origen, implementado para repetir facturas de un mismo servicio
             Movimiento m = bte.movimientos.Where(movimiento => movimiento.concepto == id_servicio).SingleOrDefault(movimiento => movimiento.usuario_origen == id_usuario);
             return m;
         }
@@ -136,6 +133,7 @@ namespace BancoDeTiempo
 
         public static Solicitud buscarSolPorServicio(Servicio servicio)
         {
+            //Da un único resultado de la búsqueda, si hay más de un resultado, lanza una excepción
             Solicitud sltd = bte.solicitudes.Where(solicitud => solicitud.concepto == servicio.id_servicio).SingleOrDefault();
             return sltd;
         }
@@ -174,6 +172,7 @@ namespace BancoDeTiempo
 
         public static Servicio buscarServPorNombre(String nombre)
         {
+            //Da un único resultado de la búsqueda, si hay más de un resultado, lanza una excepción
             Servicio s = bte.servicios.SingleOrDefault(servicio => servicio.titulo == nombre);
             return s;
         }
@@ -214,6 +213,7 @@ namespace BancoDeTiempo
 
         public static TipoServicio buscarTipoPorNombre(String nombre)
         {
+            //Da un único resultado de la búsqueda, si hay más de un resultado, lanza una excepción
             TipoServicio ts = bte.tipo_servicio.SingleOrDefault(t_servicio => t_servicio.tipo_servicio == nombre);
             return ts;
         }
@@ -249,6 +249,7 @@ namespace BancoDeTiempo
 
         public static Usuario buscarUserPorNombre(String nombre)
         {
+            //Da un único resultado de la búsqueda, si hay más de un resultado, lanza una excepción
             Usuario u = bte.usuarios.SingleOrDefault(usuario => usuario.nombre_usuario == nombre);
             return u;
         }
