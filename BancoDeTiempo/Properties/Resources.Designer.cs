@@ -61,12 +61,50 @@ namespace BancoDeTiempo.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon icono_reloj {
+            get {
+                object obj = ResourceManager.GetObject("icono_reloj", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap LOGO_THE_BANKERS_pq {
             get {
                 object obj = ResourceManager.GetObject("LOGO-THE-BANKERS_pq", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a /* Crear base de datos */
+        ///if not exists(select * from sys.databases where name = &apos;timebank&apos;)
+        ///	CREATE DATABASE timebank
+        ///go
+        ///
+        ////* Seleccionar base de datos */
+        ///USE timebank;
+        ///
+        ////* Crear tabla categorías */
+        ///if not exists (select * from sysobjects where name=&apos;categorias&apos; and xtype=&apos;U&apos;)
+        ///	CREATE TABLE categorias (
+        ///	id_categoria VARCHAR(5),
+        ///	nombre_categoria VARCHAR(25) UNIQUE NOT NULL,
+        ///	ruta_imagen VARCHAR(250),
+        ///	PRIMARY KEY (id_categoria)
+        ///	)
+        ///go
+        ///
+        ////* Crear tabla usuarios */
+        ///if not exists (select * from sysobjects where [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string timebank {
+            get {
+                return ResourceManager.GetString("timebank", resourceCulture);
             }
         }
     }

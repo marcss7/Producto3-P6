@@ -299,7 +299,7 @@
             this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(280, 194);
+            this.dataGridView4.Size = new System.Drawing.Size(278, 194);
             this.dataGridView4.TabIndex = 13;
             // 
             // dataGridView5

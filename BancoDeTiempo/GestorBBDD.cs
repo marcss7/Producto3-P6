@@ -96,7 +96,7 @@ namespace BancoDeTiempo
 
         public static Movimiento buscarMovPorServicio(String id_servicio)
         {
-            Movimiento m = bte.movimientos.SingleOrDefault(movimiento => movimiento.concepto == id_servicio);
+            Movimiento m = bte.movimientos.FirstOrDefault(movimiento => movimiento.concepto == id_servicio);
             return m;
         }
 
