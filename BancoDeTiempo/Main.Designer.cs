@@ -74,9 +74,9 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(140)))), ((int)(((byte)(246)))));
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(76, 875);
+            this.button2.Location = new System.Drawing.Point(78, 640);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 67);
+            this.button2.Size = new System.Drawing.Size(128, 45);
             this.button2.TabIndex = 1;
             this.button2.Text = "Crear oferta";
             this.button2.UseVisualStyleBackColor = false;
@@ -86,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 16F);
-            this.label1.Location = new System.Drawing.Point(73, 59);
+            this.label1.Location = new System.Drawing.Point(73, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 27);
             this.label1.TabIndex = 4;
@@ -116,7 +116,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 230);
+            this.dataGridView1.Location = new System.Drawing.Point(76, 177);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -129,7 +129,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(320, 630);
+            this.dataGridView1.Size = new System.Drawing.Size(320, 448);
             this.dataGridView1.TabIndex = 5;
             // 
             // dataGridView2
@@ -155,7 +155,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.Location = new System.Drawing.Point(878, 230);
+            this.dataGridView2.Location = new System.Drawing.Point(878, 177);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -197,7 +197,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView3.Location = new System.Drawing.Point(878, 561);
+            this.dataGridView3.Location = new System.Drawing.Point(878, 485);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -210,56 +210,56 @@
             this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(280, 299);
+            this.dataGridView3.Size = new System.Drawing.Size(280, 200);
             this.dataGridView3.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 26F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(70, 185);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(70, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 42);
+            this.label2.Size = new System.Drawing.Size(222, 36);
             this.label2.TabIndex = 8;
             this.label2.Text = "OFERTAS PUBLICADAS";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 26F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(872, 185);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 22F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(872, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 42);
+            this.label3.Size = new System.Drawing.Size(141, 36);
             this.label3.TabIndex = 9;
             this.label3.Text = "MIS OFERTAS";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 26F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(872, 516);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 22F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(872, 446);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(220, 42);
+            this.label4.Size = new System.Drawing.Size(190, 36);
             this.label4.TabIndex = 10;
             this.label4.Text = "MIS MOVIMIENTOS";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 26F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(453, 185);
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 22F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(452, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(276, 42);
+            this.label5.Size = new System.Drawing.Size(236, 36);
             this.label5.TabIndex = 11;
             this.label5.Text = "SOLICITUDES ENVIADAS";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 26F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(453, 516);
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 22F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(453, 440);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(283, 42);
+            this.label6.Size = new System.Drawing.Size(243, 36);
             this.label6.TabIndex = 12;
             this.label6.Text = "SOLICITUDES RECIBIDAS";
             // 
@@ -286,7 +286,7 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView4.Location = new System.Drawing.Point(458, 230);
+            this.dataGridView4.Location = new System.Drawing.Point(458, 177);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -299,7 +299,7 @@
             this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(278, 194);
+            this.dataGridView4.Size = new System.Drawing.Size(278, 200);
             this.dataGridView4.TabIndex = 13;
             // 
             // dataGridView5
@@ -325,7 +325,7 @@
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView5.Location = new System.Drawing.Point(458, 561);
+            this.dataGridView5.Location = new System.Drawing.Point(459, 479);
             this.dataGridView5.MultiSelect = false;
             this.dataGridView5.Name = "dataGridView5";
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -338,7 +338,7 @@
             this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(360, 299);
+            this.dataGridView5.Size = new System.Drawing.Size(360, 150);
             this.dataGridView5.TabIndex = 14;
             // 
             // button1
@@ -346,9 +346,9 @@
             this.button1.BackColor = System.Drawing.Color.DarkOrange;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1057, 47);
+            this.button1.Location = new System.Drawing.Point(1177, 36);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 73);
+            this.button1.Size = new System.Drawing.Size(106, 61);
             this.button1.TabIndex = 6;
             this.button1.Text = "Cerrar sesión";
             this.button1.UseVisualStyleBackColor = false;
@@ -358,7 +358,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 16F);
-            this.label7.Location = new System.Drawing.Point(73, 93);
+            this.label7.Location = new System.Drawing.Point(73, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 27);
             this.label7.TabIndex = 16;
@@ -369,7 +369,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(140)))), ((int)(((byte)(246)))));
             this.button3.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(317, 875);
+            this.button3.Location = new System.Drawing.Point(317, 640);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 45);
             this.button3.TabIndex = 2;
@@ -382,7 +382,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(140)))), ((int)(((byte)(246)))));
             this.button4.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(878, 875);
+            this.button4.Location = new System.Drawing.Point(1180, 640);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 45);
             this.button4.TabIndex = 5;
@@ -396,7 +396,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(458, 875);
+            this.button5.Location = new System.Drawing.Point(459, 640);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(178, 45);
             this.button5.TabIndex = 4;
@@ -409,7 +409,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(140)))), ((int)(((byte)(246)))));
             this.button6.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(458, 444);
+            this.button6.Location = new System.Drawing.Point(458, 389);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(178, 45);
             this.button6.TabIndex = 3;
@@ -419,17 +419,17 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(234)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1229, 971);
+            this.ClientSize = new System.Drawing.Size(1346, 725);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.label6);
@@ -440,8 +440,7 @@
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

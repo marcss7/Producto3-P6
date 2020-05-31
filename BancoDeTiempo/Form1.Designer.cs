@@ -47,7 +47,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(527, 723);
+            this.button1.Location = new System.Drawing.Point(588, 572);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 49);
             this.button1.TabIndex = 2;
@@ -59,7 +59,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::BancoDeTiempo.Properties.Resources.LOGO_THE_BANKERS_pq;
-            this.pictureBox1.Location = new System.Drawing.Point(314, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(375, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(600, 600);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -72,7 +72,7 @@
             this.comboBox1.DisplayMember = "nombre_usuario";
             this.comboBox1.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 14F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(527, 675);
+            this.comboBox1.Location = new System.Drawing.Point(588, 524);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(174, 31);
             this.comboBox1.TabIndex = 1;
@@ -98,7 +98,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(234)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1229, 971);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
